@@ -1,0 +1,49 @@
+// TODO: Add nav bar and Python quiz options
+// TODO: Lists the Python questions for the Python Quiz
+var questions = [
+    {
+        title: 
+        choices: 
+        answer: 
+    },
+    {
+        title:  
+        choices: 
+        answer: 
+    },
+    {
+        title:  
+        choices: 
+        answer: 
+    },
+    {
+        title:  
+        choices: 
+        answer: 
+    },
+    {
+        title:  
+        choices: 
+        answer: 
+    },
+    {
+        title:  
+        choices: 
+        answer: 
+    },
+    {
+        title:  
+        choices: 
+        answer: 
+    },
+    {
+        title:  
+        choices: 
+        answer: 
+    },
+    {
+        title:  
+        choices: 
+        answer: 
+    }
+]
