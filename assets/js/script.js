@@ -1,6 +1,6 @@
 // Define variables and DOM reference elements
 var current = 0;
-var time = questions.length * 15;
+var time = questions.length * 10;
 var timerId;
 var questionsEl = document.getElementById("questions");
 var timerEl = document.getElementById("time");
@@ -18,7 +18,7 @@ function startQuiz() {
   questionsEl.removeAttribute("class");
   timerId = setInterval(clock, 1000);
   timerEl.textContent = time;
-  getQuestion();
+  generateQuestion();
 }
 
 // Runs quiz timer
@@ -47,7 +47,7 @@ function generateQuestion() {
     choiceButton.setAttribute("class", "choice");
     choiceButton.setAttribute("value", choice);
     choiceButton.textContent = i + 1 + ". " + choice;
-    choiceButton.onclick = questionClick;
+    choiceButton.onclick = clickQuestion;
     choicesEl.appendChild(choiceButton);
   });
 }
@@ -62,10 +62,11 @@ function clickQuestion() {
     }
     timerEl.textContent = time;
     current++;
-  if (current === questions.length) {
-    endQuiz();
-  } else {
-    generateQuestion();
+    if (current === questions.length) {
+      endQuiz();
+    } else {
+      generateQuestion();
+    }
   }
 }
 
@@ -111,6 +112,6 @@ function checkForEnter(event) {
 }
 
 // Sets up key submission
-submitBtn.onclick = saveHighscore;
+submitBtn.onclick = saveScore;
 startBtn.onclick = startQuiz;
 initialsEl.onkeyup = checkForEnter;
