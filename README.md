@@ -19,6 +19,7 @@ SO THAT I can gauge my progress compared to my peers
 
 * Add a feature for multiple correct answers in a question.
 * Add other quiz languages like Python and C++.
+* Add sounds and overall more stimulating environment
 
 ## Instructions
 
